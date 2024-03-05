@@ -39,31 +39,31 @@ By default, the project will be available at `http://localhost:8000`.
 - `configs/`: Directory for configuration files.
 - `schema/`: Directory for database initialization.
 
-# Получение информации о резервировании
-curl -i http://127.0.0.1:8000/api/v1/reserve/
+# Retrieving reservation information
+curl -i -X POST http://127.0.0.1:8000/api/v1/reserve/
 
-## Ответ (успешный запрос):
-## HTTP/1.1 200 OK
+# Response (successful request):
+# HTTP/1.1 200 OK
 
-## Ответ (неуспешный запрос):
-## HTTP/1.1 400 Bad Request
+# Response (unsuccessful request):
+# HTTP/1.1 400 Bad Request
 
-## Отмена резервирования
+# Cancelling a reservation
 curl -i -X POST http://127.0.0.1:8000/api/v1/reserve/cancel
 
-## Ответ (успешный запрос):
-## HTTP/1.1 200 OK
+# Response (successful request):
+# HTTP/1.1 200 OK
 
-## Ответ (неуспешный запрос):
-## HTTP/1.1 400 Bad Request
+# Response (unsuccessful request):
+# HTTP/1.1 400 Bad Request
 
-## Получение информации о запасах в определенном складе
-curl -i http://127.0.0.1:8000/api/v1/inventory/Storage1
+# Retrieving inventory information for a specific storage
+curl -i -X GET http://127.0.0.1:8000/api/v1/inventory/Storage1
 
-## Ответ (успешный запрос):
-## HTTP/1.1 200 OK
+# Response (successful request):
+# HTTP/1.1 200 OK
 
-## Ответ (неуспешный запрос):
-## HTTP/1.1 404 Not Found
+# Response (unsuccessful request):
+# HTTP/1.1 404 Not Found
 
 
