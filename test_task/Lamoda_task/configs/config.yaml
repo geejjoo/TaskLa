@@ -1,0 +1,15 @@
+port: "8080"
+
+db:
+  driver_name: "postgres"
+  host: "postgres"
+  port: "5432"
+  username: "postgres"
+  password: "qwerty"
+  dbname: "postgres"
+  sslmode: "disable"
+
+tables:
+  storage_table: "storage"
+  product_table: "product"
+  reserve_table: "reserve"
